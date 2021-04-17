@@ -1,5 +1,6 @@
 class Astar:
 	def __init__(self, nodes, start_node, end_node):
+		""" set default parameters """
 		self.nodes = nodes
 		self.start_node = start_node
 		self.end_node = end_node
