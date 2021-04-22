@@ -69,7 +69,7 @@ class Astar:
 
 		return None
 
-
+"""
 nodes = {
     "A": [("B", 2), ("D", 3)],
     "B": [("A", 2), ("D", 5), ("C", 2)],
@@ -82,7 +82,7 @@ nodes = {
 }
 graph1 = Astar(nodes,"A","H")
 print(graph1.search())
-
+"""
 
 
 
