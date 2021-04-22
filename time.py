@@ -55,7 +55,7 @@ for key, value in dict_values2:
     new_a[key] = [(str(v),1) for v in value]
     
 
-astar = Astar(new_a,"0", "32")
+astar = Astar(new_a,"0", "48")
 print(astar.search())
 
 shortest_path = [int(i) for i in astar.search()]
