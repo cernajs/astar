@@ -43,4 +43,4 @@ def draw_random_graph(n):
 	plt.show()
  
 
-draw_random_graph(200)
+draw_random_graph(80)

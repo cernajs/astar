@@ -1,4 +1,3 @@
-
 import networkx as nx
 from itertools import combinations
 from random import random
@@ -31,3 +30,4 @@ def ER(n, p):
     return g
 
 
+print(ER(10,0.5) == True)
