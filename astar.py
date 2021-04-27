@@ -1,7 +1,8 @@
 
 class Astar:
+	""" základní třída implementující a* algoritmus na grafu v podobě slovníku"""
 	def __init__(self, nodes, start_node, end_node):
-		""" set default parameters """
+
 		self.nodes = nodes
 		self.start_node = start_node
 		self.end_node = end_node
@@ -32,10 +33,7 @@ class Astar:
 			for node in self.unvisited:
 				if n == None or self.g_cost[node] + self.heurestic(node) < self.g_cost[n] + self.heurestic(n):
 					n = node
-			"""
-			if n == None:
-				return None
-			"""
+
 			if n == self.end_node:
 				path = []
 
@@ -69,8 +67,6 @@ class Astar:
 			self.visited.add(n)
 
 		return None
-
-
 
 
 

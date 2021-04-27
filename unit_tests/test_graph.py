@@ -7,6 +7,7 @@ sys.path.append("..")
 from graph import ER
 
 class TestAstar(unittest.TestCase):
+	""" otestuje funkci ER """
 
 	def test_astar(self):
 

@@ -7,8 +7,9 @@ from astar import Astar
 
 
 class TestAstar(unittest.TestCase):
+	""" otestuje třídu Astar """
 
-	def test_astar(self):
+	def test_astar1(self):
 
 		nodes1 = {
     	"A": [("B", 2), ("D", 3)],
@@ -20,6 +21,13 @@ class TestAstar(unittest.TestCase):
     	"G": [("E", 5), ("D", 7), ("H", 2)],
     	"H": [("G", 2), ("F", 3)]
 		}
+
+		astar1 = Astar(nodes1,"A","H")
+		result1 = astar1.search()
+
+		self.assertEqual(result1,['A', 'B', 'C', 'F', 'H'])
+
+	def test_astar2(self):
 
 		nodes2 = {
 	    "A": [("B", 2), ("E", 2)],
@@ -39,14 +47,9 @@ class TestAstar(unittest.TestCase):
 	    "P": [("L", 5)]
 		}
 
-
-		astar1 = Astar(nodes1,"A","H")
-		result1 = astar1.search()
-
 		astar2 = Astar(nodes2,"A","P")
 		result2 = astar2.search()
-
-		self.assertEqual(result1,['A', 'B', 'C', 'F', 'H'])
+	
 		self.assertEqual(result2,['A', 'B', 'C', 'D', 'G', 'L', 'P'])
 
 if __name__ == '__main__':
